@@ -1,12 +1,20 @@
 import Input from "./components/Input";
 import Button from "./components/Button";
 import { Container, Content, Row, Column } from "./styled";
+import { useState } from "react";
 
 const App = () => {
+
+  const [currentNumber, setCurrent] = useState(0);
+
+  const handleAddNumber = () => {
+    
+  }
+
   return (
     <Container>
       <Content>
-        <Input />
+        <Input value={currentNumber}/>
         <Row>
           <Button label="x"/>
           <Button label="/"/>
