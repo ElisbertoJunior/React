@@ -18,6 +18,8 @@ export const InputContainer = styled.div`
     background-color: #AAFFAA;
     border: 0;
     padding: 0 5px;
+
+    font-size: 25px;
   }
 
 `
