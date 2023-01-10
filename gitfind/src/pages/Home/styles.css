@@ -1,0 +1,46 @@
+.content {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+
+.background_img {
+  height: 60vh;
+  position: absolute;
+  left: -250px;
+  top: 100px;
+
+}
+
+.info {
+  width: 60%;
+  margin-right: 90px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+input {
+  border: 1px solid #999999;
+  border-radius: 22px;
+  width: 80%;
+  background: transparent;
+  font-size: 18px;
+  padding: 10px;
+  margin-right: 12px;
+  color: #ccc;
+}
+
+button {
+  border: 1px solid #999999;
+  border-radius: 22px;
+  background: #2D333B;
+  font-size: 18px;
+  padding: 10px 15px;
+  margin-right: 12px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+}
