@@ -1,9 +1,19 @@
+import { useState } from "react";
 import { Header } from "../../components/Header";
 import background from "../../assets/background.png";
 import ItemList from "../../components/ItemList";
 import "./styles.css";
 
 const App = () => {
+ const [user, setUser] = useState("");
+ const [currentUser, setCurrentUser] = useState(null);
+ const [repos, setRepos] = useState(null);
+
+ const handleGetData = async () => {
+  const userData = await fetch(`https://api.github.com/users/${user}`)
+ }
+
+
   return (
     <div className="App">
       <Header/>
@@ -11,7 +21,11 @@ const App = () => {
         <img className="background_img" src={background} alt="background app"/>
         <div className="info">
           <div>
-            <input name="user" placeholder="@username"/>
+            <input 
+              name="user"
+              value={user} 
+              placeholder="@username"
+              onChange={event => setUser(event.target.value)}/>
             <button>Burcar</button>
           </div>
           <div className="perfil">
