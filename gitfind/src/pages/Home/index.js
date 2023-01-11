@@ -51,7 +51,7 @@ const App = () => {
             />
             <div>
               <h3>{currentUser.name}</h3>
-              <span>{currentUser.login}</span>
+              <span>@{currentUser.login}</span>
               <p>{currentUser.bio}</p>
            </div>
           </div>
@@ -60,7 +60,10 @@ const App = () => {
           {repos?.length ? (
             <div>
               <h4 className="repositories">Repositorios</h4>
-              <ItemList title="teste1" description="teste description"/>
+              {repos.map(repo => ( 
+                <ItemList title={repo.name} description={repo.description}/>
+              ))}
+             
             </div>
           ) : null}
           
