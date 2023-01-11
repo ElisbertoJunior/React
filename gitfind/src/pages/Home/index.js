@@ -1,5 +1,6 @@
 import { Header } from "../../components/Header";
-import background from "../../assets/background.png"
+import background from "../../assets/background.png";
+import ItemList from "../../components/ItemList";
 import "./styles.css";
 
 const App = () => {
@@ -27,11 +28,12 @@ const App = () => {
           </div>
           <hr />
           <div>
-            <h4>Repositorios</h4>
+            <h4 className="repositories">Repositorios</h4>
+            <ItemList title="teste1" description="teste description"/>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 
