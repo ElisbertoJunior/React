@@ -13,6 +13,22 @@ const App = () => {
             <input name="user" placeholder="@username"/>
             <button>Burcar</button>
           </div>
+          <div className="perfil">
+            <img 
+              src="https://avatars.githubusercontent.com/u/94086819?s=400&u=242e5321baaae649d2e0cbd4b481afacdd8e488b&v=4" 
+              className="profile"
+              alt="Imagem de Perfil"
+            />
+            <div>
+              <h3>Elisberto Junior</h3>
+              <span>@ElisbertoJunior</span>
+              <p>descricao</p>
+           </div>
+          </div>
+          <hr />
+          <div>
+            <h4>Repositorios</h4>
+          </div>
         </div>
       </div>
     </div>
