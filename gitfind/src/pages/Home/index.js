@@ -10,8 +10,22 @@ const App = () => {
  const [repos, setRepos] = useState(null);
 
  const handleGetData = async () => {
-  const userData = await fetch(`https://api.github.com/users/${user}`)
- }
+  const userData = await fetch(`https://api.github.com/users/${user}`);
+  const newUser = await userData.json();
+
+  if (newUser.name) {
+    const { avatar_url, name, bio, login } = newUser;
+    setCurrentUser({ avatar_url, name, bio, login });
+
+    const reposData = await fetch(`https://api.github.com/users/${user}/repos`);
+    const newRepos = await reposData.json();
+
+    if (newRepos.length) {
+      setRepos(newRepos);
+    }
+  } 
+
+ };
 
 
   return (
@@ -26,25 +40,30 @@ const App = () => {
               value={user} 
               placeholder="@username"
               onChange={event => setUser(event.target.value)}/>
-            <button>Burcar</button>
+            <button onClick={handleGetData}>Burcar</button>
           </div>
-          <div className="perfil">
+          {currentUser?.name ? (<>
+            <div className="perfil">
             <img 
-              src="https://avatars.githubusercontent.com/u/94086819?s=400&u=242e5321baaae649d2e0cbd4b481afacdd8e488b&v=4" 
+              src={currentUser.avatar_url} 
               className="profile"
               alt="Imagem de Perfil"
             />
             <div>
-              <h3>Elisberto Junior</h3>
-              <span>@ElisbertoJunior</span>
-              <p>descricao</p>
+              <h3>{currentUser.name}</h3>
+              <span>{currentUser.login}</span>
+              <p>{currentUser.bio}</p>
            </div>
           </div>
           <hr />
-          <div>
-            <h4 className="repositories">Repositorios</h4>
-            <ItemList title="teste1" description="teste description"/>
-          </div>
+          </>) : null}
+          {repos?.length ? (
+            <div>
+              <h4 className="repositories">Repositorios</h4>
+              <ItemList title="teste1" description="teste description"/>
+            </div>
+          ) : null}
+          
         </div>
       </div>
     </div> 
