@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputContainer } from './styles'
+import { ButtonContainer } from './styles'
 
 const Button = () =>  {
   return (
@@ -9,4 +9,4 @@ const Button = () =>  {
   )
 }
 
-export default Button 
+export default Button;
