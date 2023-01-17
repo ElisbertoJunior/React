@@ -1,7 +1,7 @@
 import { ItemContainer } from "./styles"
 
 
-const ItemRepo = () => {
+const ItemRepo = ({ repo }) => {
   return (
     <ItemContainer>
       <h3>Elisberto</h3>
