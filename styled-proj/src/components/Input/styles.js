@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputConatiner = styled.div`
+export const InputContainer = styled.div`
   width: 100%;
   max-width: 275px;
   height: 30px;
@@ -13,4 +13,14 @@ export const InputConatiner = styled.div`
 
 `
 
-export
+export const IconContainer = styled.div`
+  margin-right: 10px;
+
+`
+
+export const InputText = styled.input`
+  background-color: transparent;
+  color: #FFFFFF;
+  bottom: 0;
+  height: 30px;
+`
