@@ -1,9 +1,8 @@
 
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
-  Link
 } from 'react-router-dom';
 
 import Home from "./pages/Home";
@@ -12,14 +11,12 @@ import Login from "./pages/Login";
 const App = () => {
   return (
    <Router>
-      <Switch>
-        <Route path="/">
-          <Home/>
-        </Route>
-        <Route path="/login">
-          <Login/>
-        </Route>
-      </Switch>
+      
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/Login' element={<Login/>}/>
+        </Routes>
+      
    </Router>
   );
 }
