@@ -1,31 +1,47 @@
 import { Link } from 'react-router-dom'
+import { MdEmail, MdLock } from 'react-icons/md'
 
 import Button from '../../components/Button';
 import Header from '../../components/Header';
-import { Container, Title, TitleHighLight, TextContent } from './styles'
+import Input from '../../components/Input';
+import { 
+  Container, 
+  Column, 
+  CreateAccount, 
+  ForgotText, 
+  Row, 
+  SubtitleLogin,
+  Title,
+  TitleLogin,
+  Wrapper 
+} from './styles'
 
  const Login = () => {
   return (
       <>
         <Header/>
         <Container>
-          <div>
+          <Column>
             <Title>
-              <TitleHighLight>
-                Implemente
-                <br/>  
-              </TitleHighLight>
-              O seu futuro global agora!
+              A plataforma para voce aprender com experts, dominar as
+              principais tecnologias e entrar mais rapido nas empresas mais desejadas.
             </Title>
-            <TextContent>
-              Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo
-              e encare seu novo desafio profissional, evoluindo com os melhores experts.
-            </TextContent>
-            <Button title='Comecar agora' variant="secondary" onClick={() => null}/>
-          </div>
-          <div>
-            <img src="#" alt="Imagem principal" />
-          </div>
+          </Column>
+          <Column>
+            <Wrapper>
+              <TitleLogin>Faca seu cadastro</TitleLogin>
+              <SubtitleLogin>Faca seu login e make the change._</SubtitleLogin>
+              <form>
+                <Input placeholder="E-mail" leftIcon={<MdEmail/>}/>
+                <Input placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
+                <Button title="Entrar" variant="secondary"/>
+              </form>
+              <Row>
+                <ForgotText>Esqueci minha senha</ForgotText>
+                <CreateAccount>Criar Conta</CreateAccount>
+              </Row>
+            </Wrapper>
+          </Column>
         </Container>
       
       </>
