@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Conatainer = styled.div`
+export const Container = styled.div`
   width: 100%;
   max-width: 80%;
   height: 47px;
@@ -41,6 +41,10 @@ export const SearchInputContainer = styled.div`
   border-radius: 8px;
   padding: 2px 5px;
   margin: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 `
 
