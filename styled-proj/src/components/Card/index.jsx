@@ -15,7 +15,7 @@ import {
 const Card = () => {
   return (
     <CardContainer>
-      <ImageBackground/>
+      <ImageBackground src="https://i.pinimg.com/originals/5c/7b/53/5c7b53a7be1dd267f24f7559584d1345.jpg"/>
       <Content>
         <UserInfo>
           <UserPicture src="https://avatars.githubusercontent.com/u/94086819?v=4"/>
