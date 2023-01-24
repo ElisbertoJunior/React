@@ -6,6 +6,8 @@ export const CardContainer = styled.div`
   position: relative;
   margin-bottom: 24px;
 
+ 
+
 `
 
 export const ImageBackground = styled.img`
@@ -17,7 +19,7 @@ export const ImageBackground = styled.img`
 export const Content = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 12px;
 
 `
