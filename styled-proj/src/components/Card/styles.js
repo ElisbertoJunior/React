@@ -36,6 +36,50 @@ export const UserInfo = styled.div`
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+
+  p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
   }
 
 `
+
+export const UserPicture = styled.img`
+  width: 32px;
+  height: 32px;
+  border-radius: 22px;
+  border: 3px solid #FFFFFF;
+
+`
+
+export const PostInfo = styled.div`
+   margin-bottom: 12px;
+
+   h4 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: #FFFFFF;
+  }
+
+  p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #FFFFFF;
+  }
+
+
+`
+
