@@ -1,4 +1,3 @@
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,6 +6,7 @@ import {
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Feed from "./pages/Feed";
 
 const App = () => {
   return (
@@ -15,6 +15,7 @@ const App = () => {
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Login' element={<Login/>}/>
+            <Route path='/Feed' element={<Feed/>}/>
         </Routes>
       
    </Router>
