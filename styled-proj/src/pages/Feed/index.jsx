@@ -1,18 +1,28 @@
 import { Link } from 'react-router-dom'
 
-import Button from '../../components/Button';
+
 import Header from '../../components/Header';
 import Card from '../../components/Card';
 import UserInfo from '../../components/UserInfo';
-import { Container, Title, TitleHighLight, TextContent } from './styles'
+import { Container, Title, TitleHighLight, Column } from './styles'
 
  const Feed = () => {
   return (
     <>
       <Header/>
       <Container>
-        <Card/>
-        <UserInfo/>
+        <Column flex={3}>
+          <Title>Feed</Title>
+          <Card/>
+          <Card/>
+          <Card/>
+          <Card/>
+        </Column>
+        <Column flex={1}>
+          <TitleHighLight>#RANKING TOP 5 DA SEMANA</TitleHighLight>
+          <UserInfo percentual={75} name="Elisberto Junior" image="https://avatars.githubusercontent.com/u/94086819?v=4"/>
+        </Column>
+       
       </Container>
     
     </>
