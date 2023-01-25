@@ -1,10 +1,17 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import Button from '../../components/Button';
 import Header from '../../components/Header';
 import { Container, Title, TitleHighLight, TextContent } from './styles'
 
  const Home = () => {
+
+  const navigate = useNavigate();
+
+  const handleClickSign = () => {
+    navigate("/Login")
+  }
+
   return (
     <>
       <Header/>
@@ -21,7 +28,7 @@ import { Container, Title, TitleHighLight, TextContent } from './styles'
             Domine as tecnologias utilizadas pelas empresas mais inovadoras do mundo
             e encare seu novo desafio profissional, evoluindo com os melhores experts.
           </TextContent>
-          <Button title='Comecar agora' variant="secondary" onClick={() => null}/>
+          <Button title='Comecar agora' variant="secondary" onClick={handleClickSign}/>
         </div>
         <div>
           <img src="#" alt="Imagem principal" />

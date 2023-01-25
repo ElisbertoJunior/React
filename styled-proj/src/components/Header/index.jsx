@@ -12,22 +12,34 @@ import {
   Wrapper
 } from './styles'
 
- const Header = () => {
+ const Header = ({authenticated}) => {
   return (
     <Wrapper>
       <Container>
         <Row>
           <img  alt="Logo"/>
-          <SearchInputContainer title="Entrar">
-            <Input placeholder='Buscar...'/>
-          </SearchInputContainer>
-          <Menu>Live code</Menu>
-          <Menu>Global</Menu>
+          {authenticated ? (
+             <>
+              <SearchInputContainer title="Entrar">
+                <Input placeholder='Buscar...'/>
+              </SearchInputContainer>
+              <Menu>Live code</Menu>
+              <Menu>Global</Menu>
+             </>
+          ) : null}
+       
         </Row>
         <Row>
-          <MenuRight href='#'>Home</MenuRight>
-          <Button title="Entrar"/>
-          <Button title="Cadastrar"/>
+          {authenticated ? (
+              <UserPicture src="https://avatars.githubusercontent.com/u/94086819?v=4"/>   
+            ) : (
+              <>
+              <MenuRight href='#'>Home</MenuRight>
+              <Button title="Entrar"/>
+              <Button title="Cadastrar"/>
+            </>
+          )}
+        
         </Row>
       </Container>
     </Wrapper>

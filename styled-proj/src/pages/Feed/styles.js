@@ -17,7 +17,7 @@ export const Title = styled.h2`
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 25px;
   width: 320px;
   margin-bottom: 20px;
   line-height: 44px;

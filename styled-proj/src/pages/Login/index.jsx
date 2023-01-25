@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { MdEmail, MdLock } from 'react-icons/md'
 
 import Button from '../../components/Button';
@@ -17,6 +17,13 @@ import {
 } from './styles'
 
  const Login = () => {
+
+  const navigate = useNavigate();
+
+  const handleClickSign = () => {
+    navigate("/Feed")
+  }
+
   return (
       <>
         <Header/>
@@ -34,7 +41,7 @@ import {
               <form>
                 <Input placeholder="E-mail" leftIcon={<MdEmail/>}/>
                 <Input placeholder="Senha" type="password" leftIcon={<MdLock/>}/>
-                <Button title="Entrar" variant="secondary"/>
+                <Button title="Entrar" variant="secondary" onClick={handleClickSign} type="button"/>
               </form>
               <Row>
                 <ForgotText>Esqueci minha senha</ForgotText>
