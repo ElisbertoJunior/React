@@ -11,13 +11,11 @@ import Feed from "./pages/Feed";
 const App = () => {
   return (
    <Router>
-      
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Login' element={<Login/>}/>
             <Route path='/Feed' element={<Feed/>}/>
         </Routes>
-      
    </Router>
   );
 }
